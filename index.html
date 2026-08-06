@@ -1,27 +1,387 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MA AS'ADIYAH PATTIRO</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MA As'adiyah Pattiro</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f4f8;
+    color: #263238;
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(135deg, #087f5b, #10b981);
+    color: white;
+    padding: 22px 18px;
+    border-radius: 0 0 25px 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo {
+    width: 58px;
+    height: 58px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #087f5b;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0 3px 8px rgba(0,0,0,.15);
+}
+
+.header h1 {
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+.header p {
+    font-size: 13px;
+    opacity: .9;
+}
+
+/* WELCOME */
+.welcome {
+    margin: 18px;
+    padding: 20px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.08);
+}
+
+.welcome h2 {
+    color: #087f5b;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.welcome p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #667085;
+}
+
+/* SECTION */
+.section {
+    margin: 20px 18px 10px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #263238;
+    border-left: 5px solid #10b981;
+    padding-left: 10px;
+}
+
+/* GRID */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 12px 18px;
+}
+
+/* CARD */
+.menu-card {
+    min-height: 105px;
+    border-radius: 14px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px 5px;
+    box-shadow: 0 4px 9px rgba(0,0,0,.12);
+    transition: .2s;
+}
+
+.menu-card:active {
+    transform: scale(.95);
+}
+
+.icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.menu-card strong {
+    font-size: 12px;
+}
+
+.menu-card span {
+    font-size: 9px;
+    margin-top: 4px;
+    opacity: .9;
+}
+
+/* COLORS */
+.green { background: #087f5b; }
+.blue { background: #2563eb; }
+.purple { background: #7c3aed; }
+.orange { background: #f59e0b; }
+.red { background: #dc2626; }
+.pink { background: #db2777; }
+.teal { background: #0f766e; }
+.indigo { background: #4338ca; }
+.cyan { background: #0891b2; }
+.brown { background: #795548; }
+.darkgreen { background: #166534; }
+.gray { background: #64748b; }
+
+/* FOOTER */
+.footer {
+    margin-top: 30px;
+    padding: 25px 18px;
+    background: #263238;
+    color: white;
+    text-align: center;
+}
+
+.footer h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.footer p {
+    font-size: 12px;
+    line-height: 1.7;
+    color: #cbd5e1;
+}
+
+.footer .copyright {
+    margin-top: 15px;
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+/* DESKTOP */
+@media (min-width: 700px) {
+    body {
+        max-width: 850px;
+        margin: auto;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+</style>
 </head>
+
 <body>
 
-    <h1>MA AS'ADIYAH PATTIRO</h1>
+<!-- HEADER -->
+<header class="header">
+    <div class="header-content">
+        <div class="logo">MA</div>
 
-    <h2>Selamat Datang</h2>
+        <div>
+            <h1>MA AS'ADIYAH PATTIRO</h1>
+            <p>Website Resmi Madrasah</p>
+        </div>
+    </div>
+</header>
+
+
+<!-- WELCOME -->
+<section class="welcome">
+    <h2>Selamat Datang 👋</h2>
 
     <p>
-        Website Resmi MA AS'ADIYAH PATTIRO
+        Selamat datang di Portal Digital
+        <b>MA As'adiyah Pattiro</b>.
+        Akses berbagai layanan madrasah dengan mudah,
+        cepat, dan praktis.
     </p>
+</section>
+
+
+<!-- LAYANAN UMUM -->
+<div class="section">
+    <div class="section-title">
+        Layanan Umum
+    </div>
+</div>
+
+<div class="menu-grid">
+
+    <a href="#" class="menu-card green">
+        <div class="icon">📚</div>
+        <strong>PUSAKA</strong>
+        <span>Perpustakaan</span>
+    </a>
+
+    <a href="#" class="menu-card purple">
+        <div class="icon">🏛️</div>
+        <strong>EMIS</strong>
+        <span>Data Madrasah</span>
+    </a>
+
+    <a href="#" class="menu-card blue">
+        <div class="icon">👤</div>
+        <strong>MyASN</strong>
+        <span>Layanan ASN</span>
+    </a>
+
+    <a href="#" class="menu-card green">
+        <div class="icon">🕌</div>
+        <strong>SIMPATIKA</strong>
+        <span>PTK Madrasah</span>
+    </a>
+
+    <a href="#" class="menu-card teal">
+        <div class="icon">📖</div>
+        <strong>SIPENDIS</strong>
+        <span>Layanan Pendidikan</span>
+    </a>
+
+    <a href="#" class="menu-card gray">
+        <div class="icon">🎓</div>
+        <strong>PINTAR</strong>
+        <span>Pembelajaran</span>
+    </a>
+
+</div>
+
+
+<!-- LAYANAN MADRASAH -->
+<div class="section">
+    <div class="section-title">
+        Layanan Madrasah
+    </div>
+</div>
+
+<div class="menu-grid">
+
+    <a href="#" class="menu-card blue">
+        <div class="icon">🌐</div>
+        <strong>WEBSITE</strong>
+        <span>Website Madrasah</span>
+    </a>
+
+    <a href="#" class="menu-card teal">
+        <div class="icon">📝</div>
+        <strong>PPDB</strong>
+        <span>Penerimaan Murid Baru</span>
+    </a>
+
+    <a href="#" class="menu-card indigo">
+        <div class="icon">📋</div>
+        <strong>SPMB</strong>
+        <span>Sistem Penerimaan Murid</span>
+    </a>
+
+    <a href="#" class="menu-card purple">
+        <div class="icon">⏰</div>
+        <strong>JADWAL</strong>
+        <span>Jadwal Mengajar</span>
+    </a>
+
+    <a href="#" class="menu-card orange">
+        <div class="icon">✅</div>
+        <strong>STARS</strong>
+        <span>Administrasi</span>
+    </a>
+
+    <a href="#" class="menu-card blue">
+        <div class="icon">📊</div>
+        <strong>NILAI</strong>
+        <span>Data Nilai Siswa</span>
+    </a>
+
+    <a href="#" class="menu-card red">
+        <div class="icon">🎓</div>
+        <strong>E-LEARNING</strong>
+        <span>Pembelajaran Online</span>
+    </a>
+
+    <a href="#" class="menu-card cyan">
+        <div class="icon">📁</div>
+        <strong>E-DOKUMEN</strong>
+        <span>Dokumen Madrasah</span>
+    </a>
+
+    <a href="#" class="menu-card pink">
+        <div class="icon">📚</div>
+        <strong>UKK/MADRASAH</strong>
+        <span>Informasi Akademik</span>
+    </a>
+
+    <a href="#" class="menu-card brown">
+        <div class="icon">📕</div>
+        <strong>JURNAL</strong>
+        <span>Jurnal Mengajar</span>
+    </a>
+
+    <a href="#" class="menu-card gray">
+        <div class="icon">✍️</div>
+        <strong>SUPERVISI</strong>
+        <span>Supervisi Akademik</span>
+    </a>
+
+    <a href="#" class="menu-card darkgreen">
+        <div class="icon">👨‍💼</div>
+        <strong>PKKM</strong>
+        <span>Kinerja Kepala Madrasah</span>
+    </a>
+
+    <a href="#" class="menu-card indigo">
+        <div class="icon">📈</div>
+        <strong>RAPOR DIGITAL</strong>
+        <span>Rapor Siswa</span>
+    </a>
+
+    <a href="#" class="menu-card red">
+        <div class="icon">📉</div>
+        <strong>LCM</strong>
+        <span>Laporan Capaian</span>
+    </a>
+
+    <a href="#" class="menu-card orange">
+        <div class="icon">📊</div>
+        <strong>ABSENSI</strong>
+        <span>Rekap Absensi</span>
+    </a>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <h3>MA As'adiyah Pattiro</h3>
 
     <p>
-        Kepala Madrasah: Abu Yalah
+        Madrasah Aliyah As'adiyah Pattiro<br>
+        Portal Digital Madrasah
     </p>
 
-    <p>
-        Alamat: Jln. Arabica,Labbo, Kab.Bantaeng 
-    </p>
+    <div class="copyright">
+        © 2026 MA As'adiyah Pattiro
+    </div>
+
+</footer>
 
 </body>
 </html>
