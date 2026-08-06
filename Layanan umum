@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portal Digital Madrasah</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f4f7fb;
+            color: #263238;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #075e54, #128c7e);
+            color: white;
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 85px;
+            height: 85px;
+            background: white;
+            border-radius: 50%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #075e54;
+            font-size: 38px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            margin-top: 15px;
+            font-size: 28px;
+        }
+
+        header p {
+            margin-top: 7px;
+            opacity: .9;
+            font-size: 14px;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* SECTION */
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 35px 0 18px;
+        }
+
+        .section-title i {
+            color: #e91e63;
+            font-size: 22px;
+        }
+
+        .section-title h2 {
+            font-size: 21px;
+            color: #075e54;
+        }
+
+        /* CARD */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 18px;
+            padding: 25px 15px;
+            text-align: center;
+            text-decoration: none;
+            color: #263238;
+            box-shadow: 0 5px 18px rgba(0,0,0,.08);
+            transition: all .25s ease;
+            border: 1px solid #edf0f2;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 25px rgba(0,0,0,.15);
+        }
+
+        .icon {
+            width: 65px;
+            height: 65px;
+            margin: auto;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e8f5e9;
+            color: #075e54;
+            font-size: 27px;
+        }
+
+        .card h3 {
+            font-size: 16px;
+            margin-top: 15px;
+        }
+
+        .card p {
+            font-size: 11px;
+            color: #777;
+            margin-top: 5px;
+        }
+
+        /* WARNA ICON */
+        .pink {
+            background: #fce4ec;
+            color: #e91e63;
+        }
+
+        .blue {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .orange {
+            background: #fff3e0;
+            color: #ef6c00;
+        }
+
+        .purple {
+            background: #f3e5f5;
+            color: #8e24aa;
+        }
+
+        .green {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .red {
+            background: #ffebee;
+            color: #c62828;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 50px;
+            background: #075e54;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            font-size: 13px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+
+            header {
+                padding: 28px 15px;
+            }
+
+            header h1 {
+                font-size: 22px;
+            }
+
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .card {
+                padding: 20px 10px;
+            }
+
+            .icon {
+                width: 55px;
+                height: 55px;
+                font-size: 22px;
+            }
+
+            .card h3 {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+    <div class="logo">
+        <i class="fa-solid fa-school"></i>
+    </div>
+
+    <h1>PORTAL DIGITAL MADRASAH</h1>
+
+    <p>
+        Pusat Akses Layanan Digital Madrasah
+    </p>
+
+</header>
+
+
+<div class="container">
+
+    <!-- ============================= -->
+    <!-- LAYANAN UMUM -->
+    <!-- ============================= -->
+
+    <div class="section-title">
+        <i class="fa-solid fa-heart"></i>
+        <h2>Layanan Umum</h2>
+    </div>
+
+    <div class="grid">
+
+        <!-- GOOGLE -->
+        <a class="card"
+           href="https://www.google.com"
+           target="_blank">
+
+            <div class="icon blue">
+                <i class="fa-brands fa-google"></i>
+            </div>
+
+            <h3>Google</h3>
+            <p>Mesin pencarian</p>
+
+        </a>
+
+
+        <!-- GMAIL -->
+        <a class="card"
+           href="https://mail.google.com"
+           target="_blank">
+
+            <div class="icon red">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+
+            <h3>Gmail</h3>
+            <p>Email sekolah</p>
+
+        </a>
+
+
+        <!-- GOOGLE DRIVE -->
+        <a class="card"
+           href="https://drive.google.com"
+           target="_blank">
+
+            <div class="icon blue">
+                <i class="fa-brands fa-google-drive"></i>
+            </div>
+
+            <h3>Google Drive</h3>
+            <p>Penyimpanan dokumen</p>
+
+        </a>
+
+
+        <!-- YOUTUBE -->
+        <a class="card"
+           href="https://www.youtube.com"
+           target="_blank">
+
+            <div class="icon red">
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+
+            <h3>YouTube</h3>
+            <p>Video pembelajaran</p>
+
+        </a>
+
+
+        <!-- WHATSAPP -->
+        <a class="card"
+           href="https://web.whatsapp.com"
+           target="_blank">
+
+            <div class="icon green">
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+
+            <h3>WhatsApp Web</h3>
+            <p>Komunikasi</p>
+
+        </a>
+
+
+        <!-- CANVA -->
+        <a class="card"
+           href="https://www.canva.com"
+           target="_blank">
+
+            <div class="icon purple">
+                <i class="fa-solid fa-palette"></i>
+            </div>
+
+            <h3>Canva</h3>
+            <p>Desain digital</p>
+
+        </a>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- LAYANAN MADRASAH -->
+    <!-- ============================= -->
+
+    <div class="section-title">
+        <i class="fa-solid fa-heart"></i>
+        <h2>Layanan Madrasah</h2>
+    </div>
+
+    <div class="grid">
+
+        <!-- EMIS -->
+        <a class="card"
+           href="https://emis.kemenag.go.id"
+           target="_blank">
+
+            <div class="icon orange">
+                <i class="fa-solid fa-database"></i>
+            </div>
+
+            <h3>EMIS</h3>
+            <p>Education Management Information System</p>
+
+        </a>
+
+
+        <!-- SIMPATIKA -->
+        <a class="card"
+           href="https://simpatika.kemenag.go.id"
+           target="_blank">
+
+            <div class="icon blue">
+                <i class="fa-solid fa-users"></i>
+            </div>
+
+            <h3>SIMPATIKA</h3>
+            <p>Layanan PTK Madrasah</p>
+
+        </a>
+
+
+        <!-- RDM -->
+        <a class="card"
+           href="https://rdm.kemenag.go.id"
+           target="_blank">
+
+            <div class="icon green">
+                <i class="fa-solid fa-file-lines"></i>
+            </div>
+
+            <h3>RDM</h3>
+            <p>Rapor Digital Madrasah</p>
+
+        </a>
+
+
+        <!-- PDUM -->
+        <a class="card"
+           href="https://pdum.kemenag.go.id"
+           target="_blank">
+
+            <div class="icon purple">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <h3>PDUM</h3>
+            <p>Data Ujian Madrasah</p>
+
+        </a>
+
+
+        <!-- KEMENAG -->
+        <a class="card"
+           href="https://kemenag.go.id"
+           target="_blank">
+
+            <div class="icon orange">
+                <i class="fa-solid fa-mosque"></i>
+            </div>
+
+            <h3>Kemenag</h3>
+            <p>Kementerian Agama</p>
+
+        </a>
+
+
+        <!-- PIP -->
+        <a class="card"
+           href="https://pipmadrasah.kemenag.go.id"
+           target="_blank">
+
+            <div class="icon pink">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+            </div>
+
+            <h3>PIP Madrasah</h3>
+            <p>Program Indonesia Pintar</p>
+
+        </a>
+
+
+        <!-- BOP -->
+        <a class="card"
+           href="https://bop.kemenag.go.id"
+           target="_blank">
+
+            <div class="icon green">
+                <i class="fa-solid fa-money-bill-wave"></i>
+            </div>
+
+            <h3>BOP</h3>
+            <p>Bantuan Operasional</p>
+
+        </a>
+
+
+        <!-- VERVAL -->
+        <a class="card"
+           href="https://vervalptk.data.kemdikbud.go.id"
+           target="_blank">
+
+            <div class="icon blue">
+                <i class="fa-solid fa-check-circle"></i>
+            </div>
+
+            <h3>Verval PTK</h3>
+            <p>Verifikasi data PTK</p>
+
+        </a>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- INFORMASI -->
+    <!-- ============================= -->
+
+    <div class="section-title">
+        <i class="fa-solid fa-heart"></i>
+        <h2>Informasi</h2>
+    </div>
+
+    <div class="grid">
+
+        <a class="card"
+           href="#">
+
+            <div class="icon pink">
+                <i class="fa-solid fa-bullhorn"></i>
+            </div>
+
+            <h3>Pengumuman</h3>
+            <p>Informasi terbaru madrasah</p>
+
+        </a>
+
+
+        <a class="card"
+           href="#">
+
+            <div class="icon orange">
+                <i class="fa-solid fa-calendar-days"></i>
+            </div>
+
+            <h3>Kalender Akademik</h3>
+            <p>Jadwal kegiatan madrasah</p>
+
+        </a>
+
+
+        <a class="card"
+           href="#">
+
+            <div class="icon green">
+                <i class="fa-solid fa-book"></i>
+            </div>
+
+            <h3>Materi Pembelajaran</h3>
+            <p>Sumber belajar digital</p>
+
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        <i class="fa-solid fa-heart"></i>
+        Portal Digital Madrasah
+    </p>
+
+    <p>
+        © 2026 - Semua Hak Dilindungi
+    </p>
+
+</footer>
+
+
+</body>
+</html>
