@@ -14,153 +14,287 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f1f4f8;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #f5f7fb, #eef2f7);
     color: #263238;
+    padding-bottom: 30px;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
+
 .header {
-    background: linear-gradient(135deg, #087f5b, #10b981);
+    background: linear-gradient(135deg, #087f5b, #16a085);
     color: white;
-    padding: 22px 18px;
-    border-radius: 0 0 25px 25px;
-    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+    padding: 22px 18px 28px;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
 
-.header-content {
+.header-box {
     display: flex;
     align-items: center;
     gap: 14px;
 }
 
 .logo {
-    width: 58px;
-    height: 58px;
-    background: white;
+    width: 62px;
+    height: 62px;
     border-radius: 50%;
+    background: white;
+    color: #087f5b;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #087f5b;
+
     font-size: 22px;
     font-weight: bold;
-    box-shadow: 0 3px 8px rgba(0,0,0,.15);
+
+    box-shadow: 0 4px 10px rgba(0,0,0,.2);
 }
 
 .header h1 {
-    font-size: 21px;
+    font-size: 20px;
     margin-bottom: 5px;
 }
 
 .header p {
-    font-size: 13px;
+    font-size: 12px;
     opacity: .9;
 }
 
-/* WELCOME */
+/* ================= WELCOME ================= */
+
 .welcome {
-    margin: 18px;
-    padding: 20px;
     background: white;
+    margin: -10px 18px 20px;
+    padding: 18px;
     border-radius: 18px;
-    box-shadow: 0 3px 12px rgba(0,0,0,.08);
+
+    box-shadow: 0 4px 15px rgba(0,0,0,.08);
 }
 
 .welcome h2 {
     color: #087f5b;
-    font-size: 20px;
-    margin-bottom: 8px;
+    font-size: 19px;
+    margin-bottom: 7px;
 }
 
 .welcome p {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.6;
     color: #667085;
 }
 
-/* SECTION */
+/* ================= SECTION ================= */
+
 .section {
-    margin: 20px 18px 10px;
+    margin: 20px 18px 8px;
 }
 
 .section-title {
     font-size: 18px;
     font-weight: bold;
     color: #263238;
-    border-left: 5px solid #10b981;
-    padding-left: 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-/* GRID */
-.menu-grid {
+.section-title::before {
+    content: "";
+    width: 5px;
+    height: 25px;
+    background: #087f5b;
+    border-radius: 5px;
+}
+
+/* ================= LOVE GRID ================= */
+
+.love-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    margin: 12px 18px;
+
+    margin: 10px 12px 20px;
 }
 
-/* CARD */
-.menu-card {
-    min-height: 105px;
-    border-radius: 14px;
-    color: white;
+/* ================= HEART ================= */
+
+.heart {
+    position: relative;
+
+    width: 105px;
+    height: 95px;
+
+    margin: auto;
+
     text-decoration: none;
+    color: white;
+
+    transform: rotate(-45deg);
+
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 10px 5px;
-    box-shadow: 0 4px 9px rgba(0,0,0,.12);
+
+    filter: drop-shadow(0 4px 5px rgba(0,0,0,.16));
+
     transition: .2s;
 }
 
-.menu-card:active {
-    transform: scale(.95);
+/* kotak utama */
+
+.heart::before {
+    content: "";
+    position: absolute;
+
+    width: 65px;
+    height: 65px;
+
+    background: var(--heart-color);
+
+    left: 20px;
+    top: 20px;
+
+    border-radius: 10px;
 }
 
-.icon {
-    font-size: 28px;
-    margin-bottom: 8px;
+/* lingkaran kiri */
+
+.heart::after {
+    content: "";
+    position: absolute;
+
+    width: 65px;
+    height: 65px;
+
+    background: var(--heart-color);
+
+    left: 0;
+    top: 0;
+
+    border-radius: 50%;
+
+    box-shadow:
+        45px 0 0 var(--heart-color);
 }
 
-.menu-card strong {
-    font-size: 12px;
+/* isi hati */
+
+.heart-content {
+    position: relative;
+    z-index: 5;
+
+    transform: rotate(45deg);
+
+    width: 90px;
+
+    text-align: center;
+
+    margin-top: 5px;
 }
 
-.menu-card span {
-    font-size: 9px;
-    margin-top: 4px;
+.heart-icon {
+    font-size: 23px;
+    margin-bottom: 4px;
+}
+
+.heart-title {
+    display: block;
+
+    font-size: 10px;
+    font-weight: bold;
+
+    line-height: 1.15;
+}
+
+.heart-subtitle {
+    display: block;
+
+    font-size: 7px;
+
+    margin-top: 3px;
+
     opacity: .9;
 }
 
-/* COLORS */
-.green { background: #087f5b; }
-.blue { background: #2563eb; }
-.purple { background: #7c3aed; }
-.orange { background: #f59e0b; }
-.red { background: #dc2626; }
-.pink { background: #db2777; }
-.teal { background: #0f766e; }
-.indigo { background: #4338ca; }
-.cyan { background: #0891b2; }
-.brown { background: #795548; }
-.darkgreen { background: #166534; }
-.gray { background: #64748b; }
+/* efek ketika ditekan */
 
-/* FOOTER */
+.heart:active {
+    transform: rotate(-45deg) scale(.90);
+}
+
+/* ================= WARNA ================= */
+
+.green {
+    --heart-color: #087f5b;
+}
+
+.blue {
+    --heart-color: #2563eb;
+}
+
+.purple {
+    --heart-color: #7c3aed;
+}
+
+.orange {
+    --heart-color: #f59e0b;
+}
+
+.red {
+    --heart-color: #dc2626;
+}
+
+.pink {
+    --heart-color: #db2777;
+}
+
+.teal {
+    --heart-color: #0f766e;
+}
+
+.cyan {
+    --heart-color: #0891b2;
+}
+
+.indigo {
+    --heart-color: #4338ca;
+}
+
+.brown {
+    --heart-color: #795548;
+}
+
+.darkgreen {
+    --heart-color: #166534;
+}
+
+.gray {
+    --heart-color: #64748b;
+}
+
+/* ================= FOOTER ================= */
+
 .footer {
     margin-top: 30px;
-    padding: 25px 18px;
+
     background: #263238;
+
     color: white;
+
     text-align: center;
+
+    padding: 25px 15px;
+
+    border-radius: 25px 25px 0 0;
 }
 
 .footer h3 {
     font-size: 17px;
-    margin-bottom: 8px;
+    margin-bottom: 7px;
 }
 
 .footer p {
@@ -169,219 +303,640 @@ body {
     color: #cbd5e1;
 }
 
-.footer .copyright {
-    margin-top: 15px;
-    font-size: 11px;
+.footer small {
+    display: block;
+    margin-top: 12px;
     color: #94a3b8;
 }
 
-/* DESKTOP */
+
+/* ================= DESKTOP ================= */
+
 @media (min-width: 700px) {
+
     body {
         max-width: 850px;
         margin: auto;
     }
 
-    .menu-grid {
+    .love-grid {
         grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
     }
+
 }
+
 </style>
 </head>
 
+
 <body>
 
-<!-- HEADER -->
+
+<!-- ================= HEADER ================= -->
+
 <header class="header">
-    <div class="header-content">
-        <div class="logo">MA</div>
+
+    <div class="header-box">
+
+        <div class="logo">
+            MA
+        </div>
 
         <div>
-            <h1>MA AS'ADIYAH PATTIRO</h1>
-            <p>Website Resmi Madrasah</p>
+
+            <h1>
+                MA AS'ADIYAH PATTIRO
+            </h1>
+
+            <p>
+                Portal Digital Madrasah
+            </p>
+
         </div>
+
     </div>
+
 </header>
 
 
-<!-- WELCOME -->
+
+<!-- ================= WELCOME ================= -->
+
 <section class="welcome">
-    <h2>Selamat Datang 👋</h2>
+
+    <h2>
+        Selamat Datang ❤️
+    </h2>
 
     <p>
         Selamat datang di Portal Digital
         <b>MA As'adiyah Pattiro</b>.
-        Akses berbagai layanan madrasah dengan mudah,
-        cepat, dan praktis.
+        Silakan pilih layanan yang ingin Anda akses.
     </p>
+
 </section>
 
 
-<!-- LAYANAN UMUM -->
+
+<!-- ================= LAYANAN UMUM ================= -->
+
 <div class="section">
+
     <div class="section-title">
         Layanan Umum
     </div>
-</div>
-
-<div class="menu-grid">
-
-    <a href="#" class="menu-card green">
-        <div class="icon">📚</div>
-        <strong>PUSAKA</strong>
-        <span>Perpustakaan</span>
-    </a>
-
-    <a href="#" class="menu-card purple">
-        <div class="icon">🏛️</div>
-        <strong>EMIS</strong>
-        <span>Data Madrasah</span>
-    </a>
-
-    <a href="#" class="menu-card blue">
-        <div class="icon">👤</div>
-        <strong>MyASN</strong>
-        <span>Layanan ASN</span>
-    </a>
-
-    <a href="#" class="menu-card green">
-        <div class="icon">🕌</div>
-        <strong>SIMPATIKA</strong>
-        <span>PTK Madrasah</span>
-    </a>
-
-    <a href="#" class="menu-card teal">
-        <div class="icon">📖</div>
-        <strong>SIPENDIS</strong>
-        <span>Layanan Pendidikan</span>
-    </a>
-
-    <a href="#" class="menu-card gray">
-        <div class="icon">🎓</div>
-        <strong>PINTAR</strong>
-        <span>Pembelajaran</span>
-    </a>
 
 </div>
 
 
-<!-- LAYANAN MADRASAH -->
+<div class="love-grid">
+
+
+    <!-- PUSAKA -->
+
+    <a href="#" class="heart green">
+
+        <div class="heart-content">
+
+            <div class="heart-icon">
+                📚
+            </div>
+
+            <span class="heart-title">
+                PUSAKA
+            </span>
+
+            <span class="heart-subtitle">
+                Perpustakaan
+            </span>
+
+        </div>
+
+    </a>
+
+
+
+    <!-- EMIS -->
+
+    <a href="#" class="heart purple">
+
+        <div class="heart-content">
+
+            <div class="heart-icon">
+                🏛️
+            </div>
+
+            <span class="heart-title">
+                EMIS
+            </span>
+
+            <span class="heart-subtitle">
+                Data Madrasah
+            </span>
+
+        </div>
+
+    </a>
+
+
+
+    <!-- MyASN -->
+
+    <a href="#" class="heart blue">
+
+        <div class="heart-content">
+
+            <div class="heart-icon">
+                👤
+            </div>
+
+            <span class="heart-title">
+                MyASN
+            </span>
+
+            <span class="heart-subtitle">
+                Layanan ASN
+            </span>
+
+        </div>
+
+    </a>
+
+
+
+    <!-- SIMPATIKA -->
+
+    <a href="#" class="heart green">
+
+        <div class="heart-content">
+
+            <div class="heart-icon">
+                🕌
+            </div>
+
+            <span class="heart-title">
+                SIMPATIKA
+            </span>
+
+            <span class="heart-subtitle">
+                PTK Madrasah
+            </span>
+
+        </div>
+
+    </a>
+
+
+
+    <!-- SIPENDIS -->
+
+    <a href="#" class="heart teal">
+
+        <div class="heart-content">
+
+            <div class="heart-icon">
+                📖
+            </div>
+
+            <span class="heart-title">
+                SIPENDIS
+            </span>
+
+            <span class="heart-subtitle">
+                Pendidikan
+            </span>
+
+        </div>
+
+    </a>
+
+
+
+    <!-- PINTAR -->
+
+    <a href="#" class="heart gray">
+
+        <div class="heart-content">
+
+            <div class="heart-icon">
+                🎓
+            </div>
+
+            <span class="heart-title">
+                PINTAR
+            </span>
+
+            <span class="heart-subtitle">
+                Pembelajaran
+            </span>
+
+        </div>
+
+    </a>
+
+
+</div>
+
+
+
+<!-- ================= LAYANAN MADRASAH ================= -->
+
 <div class="section">
+
     <div class="section-title">
         Layanan Madrasah
     </div>
-</div>
-
-<div class="menu-grid">
-
-    <a href="#" class="menu-card blue">
-        <div class="icon">🌐</div>
-        <strong>WEBSITE</strong>
-        <span>Website Madrasah</span>
-    </a>
-
-    <a href="#" class="menu-card teal">
-        <div class="icon">📝</div>
-        <strong>PPDB</strong>
-        <span>Penerimaan Murid Baru</span>
-    </a>
-
-    <a href="#" class="menu-card indigo">
-        <div class="icon">📋</div>
-        <strong>SPMB</strong>
-        <span>Sistem Penerimaan Murid</span>
-    </a>
-
-    <a href="#" class="menu-card purple">
-        <div class="icon">⏰</div>
-        <strong>JADWAL</strong>
-        <span>Jadwal Mengajar</span>
-    </a>
-
-    <a href="#" class="menu-card orange">
-        <div class="icon">✅</div>
-        <strong>STARS</strong>
-        <span>Administrasi</span>
-    </a>
-
-    <a href="#" class="menu-card blue">
-        <div class="icon">📊</div>
-        <strong>NILAI</strong>
-        <span>Data Nilai Siswa</span>
-    </a>
-
-    <a href="#" class="menu-card red">
-        <div class="icon">🎓</div>
-        <strong>E-LEARNING</strong>
-        <span>Pembelajaran Online</span>
-    </a>
-
-    <a href="#" class="menu-card cyan">
-        <div class="icon">📁</div>
-        <strong>E-DOKUMEN</strong>
-        <span>Dokumen Madrasah</span>
-    </a>
-
-    <a href="#" class="menu-card pink">
-        <div class="icon">📚</div>
-        <strong>UKK/MADRASAH</strong>
-        <span>Informasi Akademik</span>
-    </a>
-
-    <a href="#" class="menu-card brown">
-        <div class="icon">📕</div>
-        <strong>JURNAL</strong>
-        <span>Jurnal Mengajar</span>
-    </a>
-
-    <a href="#" class="menu-card gray">
-        <div class="icon">✍️</div>
-        <strong>SUPERVISI</strong>
-        <span>Supervisi Akademik</span>
-    </a>
-
-    <a href="#" class="menu-card darkgreen">
-        <div class="icon">👨‍💼</div>
-        <strong>PKKM</strong>
-        <span>Kinerja Kepala Madrasah</span>
-    </a>
-
-    <a href="#" class="menu-card indigo">
-        <div class="icon">📈</div>
-        <strong>RAPOR DIGITAL</strong>
-        <span>Rapor Siswa</span>
-    </a>
-
-    <a href="#" class="menu-card red">
-        <div class="icon">📉</div>
-        <strong>LCM</strong>
-        <span>Laporan Capaian</span>
-    </a>
-
-    <a href="#" class="menu-card orange">
-        <div class="icon">📊</div>
-        <strong>ABSENSI</strong>
-        <span>Rekap Absensi</span>
-    </a>
 
 </div>
 
 
-<!-- FOOTER -->
+<div class="love-grid">
+
+
+
+    <!-- WEBSITE -->
+
+    <a href="#" class="heart blue">
+
+        <div class="heart-content">
+
+            <div class="heart-icon">
+                🌐
+            </div>
+
+            <span class="heart-title">
+                WEBSITE
+            </span>
+
+            <span class="heart-subtitle">
+                Website Madrasah
+            </span>
+
+        </div>
+
+    </a>
+
+
+
+    <!-- PPDB -->
+
+    <a href="#" class="heart teal">
+
+        <div class="heart-content">
+
+            <div class="heart-icon">
+                📝
+            </div>
+
+            <span class="heart-title">
+                PPDB
+            </span>
+
+            <span class="heart-subtitle">
+                Penerimaan Murid
+            </span>
+
+        </div>
+
+    </a>
+
+
+
+    <!-- SPMB -->
+
+    <a href="#" class="heart indigo">
+
+        <div class="heart-content">
+
+            <div class="heart-icon">
+                📋
+            </div>
+
+            <span class="heart-title">
+                SPMB
+            </span>
+
+            <span class="heart-subtitle">
+                Penerimaan Murid
+            </span>
+
+        </div>
+
+    </a>
+
+
+
+    <!-- JADWAL -->
+
+    <a href="#" class="heart purple">
+
+        <div class="heart-content">
+
+            <div class="heart-icon">
+                ⏰
+            </div>
+
+            <span class="heart-title">
+                JADWAL
+            </span>
+
+            <span class="heart-subtitle">
+                Jadwal Mengajar
+            </span>
+
+        </div>
+
+    </a>
+
+
+
+    <!-- NILAI -->
+
+    <a href="#" class="heart blue">
+
+        <div class="heart-content">
+
+            <div class="heart-icon">
+                📊
+            </div>
+
+            <span class="heart-title">
+                NILAI
+            </span>
+
+            <span class="heart-subtitle">
+                Nilai Siswa
+            </span>
+
+        </div>
+
+    </a>
+
+
+
+    <!-- ABSENSI -->
+
+    <a href="#" class="heart orange">
+
+        <div class="heart-content">
+
+            <div class="heart-icon">
+                📋
+            </div>
+
+            <span class="heart-title">
+                ABSENSI
+            </span>
+
+            <span class="heart-subtitle">
+                Rekap Absensi
+            </span>
+
+        </div>
+
+    </a>
+
+
+
+    <!-- E LEARNING -->
+
+    <a href="#" class="heart red">
+
+        <div class="heart-content">
+
+            <div class="heart-icon">
+                🎓
+            </div>
+
+            <span class="heart-title">
+                E-LEARNING
+            </span>
+
+            <span class="heart-subtitle">
+                Pembelajaran
+            </span>
+
+        </div>
+
+    </a>
+
+
+
+    <!-- E DOKUMEN -->
+
+    <a href="#" class="heart cyan">
+
+        <div class="heart-content">
+
+            <div class="heart-icon">
+                📁
+            </div>
+
+            <span class="heart-title">
+                E-DOKUMEN
+            </span>
+
+            <span class="heart-subtitle">
+                Dokumen
+            </span>
+
+        </div>
+
+    </a>
+
+
+
+    <!-- JURNAL -->
+
+    <a href="#" class="heart brown">
+
+        <div class="heart-content">
+
+            <div class="heart-icon">
+                📕
+            </div>
+
+            <span class="heart-title">
+                JURNAL
+            </span>
+
+            <span class="heart-subtitle">
+                Jurnal Mengajar
+            </span>
+
+        </div>
+
+    </a>
+
+
+
+    <!-- SUPERVISI -->
+
+    <a href="#" class="heart gray">
+
+        <div class="heart-content">
+
+            <div class="heart-icon">
+                ✍️
+            </div>
+
+            <span class="heart-title">
+                SUPERVISI
+            </span>
+
+            <span class="heart-subtitle">
+                Supervisi Akademik
+            </span>
+
+        </div>
+
+    </a>
+
+
+
+    <!-- PKKM -->
+
+    <a href="#" class="heart darkgreen">
+
+        <div class="heart-content">
+
+            <div class="heart-icon">
+                👨‍💼
+            </div>
+
+            <span class="heart-title">
+                PKKM
+            </span>
+
+            <span class="heart-subtitle">
+                Kinerja Madrasah
+            </span>
+
+        </div>
+
+    </a>
+
+
+
+    <!-- RAPOR -->
+
+    <a href="#" class="heart indigo">
+
+        <div class="heart-content">
+
+            <div class="heart-icon">
+                📈
+            </div>
+
+            <span class="heart-title">
+                RAPOR DIGITAL
+            </span>
+
+            <span class="heart-subtitle">
+                Rapor Siswa
+            </span>
+
+        </div>
+
+    </a>
+
+
+
+    <!-- LCK -->
+
+    <a href="#" class="heart red">
+
+        <div class="heart-content">
+
+            <div class="heart-icon">
+                📉
+            </div>
+
+            <span class="heart-title">
+                LCK
+            </span>
+
+            <span class="heart-subtitle">
+                Laporan Capaian
+            </span>
+
+        </div>
+
+    </a>
+
+
+
+    <!-- STARS -->
+
+    <a href="#" class="heart orange">
+
+        <div class="heart-content">
+
+            <div class="heart-icon">
+                ⭐
+            </div>
+
+            <span class="heart-title">
+                STARS
+            </span>
+
+            <span class="heart-subtitle">
+                Administrasi
+            </span>
+
+        </div>
+
+    </a>
+
+
+
+    <!-- GALERI -->
+
+    <a href="#" class="heart pink">
+
+        <div class="heart-content">
+
+            <div class="heart-icon">
+                📷
+            </div>
+
+            <span class="heart-title">
+                GALERI
+            </span>
+
+            <span class="heart-subtitle">
+                Dokumentasi
+            </span>
+
+        </div>
+
+    </a>
+
+
+</div>
+
+
+
+<!-- ================= FOOTER ================= -->
+
 <footer class="footer">
 
-    <h3>MA As'adiyah Pattiro</h3>
+    <h3>
+        MA As'adiyah Pattiro
+    </h3>
 
     <p>
-        Madrasah Aliyah As'adiyah Pattiro<br>
-        Portal Digital Madrasah
+        Portal Digital Madrasah<br>
+        Mudah • Cepat • Terintegrasi
     </p>
 
-    <div class="copyright">
+    <small>
         © 2026 MA As'adiyah Pattiro
-    </div>
+    </small>
 
 </footer>
+
 
 </body>
 </html>
